@@ -1,145 +1,356 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* ===============================
+   General Styles
+   =============================== */
+:root {
+  --primary: #ff6f61;
+  --primary-dark: #ff4a3d;
+  --dark: #1f2937;
+  --muted: #6b7280;
+  --light: #f9fafb;
+  --border: #e5e7eb;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--dark);
+  background-color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
 h1, h2, h3 {
-  color: #333;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-top: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color var(--transition);
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6f61;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 12px 28px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(255, 111, 97, 0.35);
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .btn:hover {
-  background-color: #ff4a3d;
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 74, 61, 0.4);
 }
 
-/* Hero Section */
+.btn:active {
+  transform: translateY(0);
+}
+
+/* ===============================
+   Hero Section
+   =============================== */
 .hero {
+  position: relative;
   background-image: url('https://via.placeholder.com/1920x1080');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
+  min-height: 520px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.75), rgba(255, 111, 97, 0.55));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  animation: fadeUp 0.9s ease both;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  margin-bottom: 28px;
+  opacity: 0.95;
 }
 
-/* Services Section */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Services Section
+   =============================== */
 .services {
-  padding: 50px 20px;
+  padding: 80px 24px;
   text-align: center;
+  background-color: var(--light);
+}
+
+.services h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 12px;
+}
+
+.services > p {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 40px;
 }
 
 .service-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
   width: 30%;
-  margin: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  min-width: 260px;
+  background-color: #fff;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
   overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
 
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
 }
 
 .card h3 {
-  margin: 15px 0;
+  margin: 20px 0 8px;
+  font-size: 1.2rem;
 }
 
 .card p {
-  padding: 0 15px 15px;
+  padding: 0 20px 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
 }
 
-/* Gallery Section */
+/* ===============================
+   Gallery Section
+   =============================== */
 .gallery {
-  padding: 50px 20px;
+  padding: 80px 24px;
   text-align: center;
+  background-color: #fff;
+}
+
+.gallery h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 40px;
 }
 
 .gallery-images {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery-images img {
-  width: 45%;
-  margin: 10px 0;
-  border-radius: 10px;
+  width: calc(50% - 10px);
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-/* Contact Section */
+.gallery-images img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===============================
+   Contact Section
+   =============================== */
 .contact {
-  padding: 50px 20px;
+  padding: 80px 24px;
   text-align: center;
+  background-color: var(--light);
+}
+
+.contact h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 30px;
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
 }
 
-#contact-form input, #contact-form textarea {
-  width: 80%;
-  padding: 10px;
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: var(--dark);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(255, 111, 97, 0.15);
+}
+
+#contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 #contact-form button {
-  padding: 10px 20px;
-  background-color: #ff6f61;
-  color: white;
+  padding: 12px 32px;
+  margin-top: 12px;
+  background-color: var(--primary);
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 6px 14px rgba(255, 111, 97, 0.35);
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 #contact-form button:hover {
-  background-color: #ff4a3d;
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 74, 61, 0.4);
 }
 
-/* Footer */
+/* ===============================
+   Footer
+   =============================== */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--dark);
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 28px 20px;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .services,
+  .gallery,
+  .contact {
+    padding: 56px 18px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    height: 220px;
+  }
+
+  #contact-form {
+    padding: 28px 20px;
+  }
 }
