@@ -1128,7 +1128,7 @@
                 </button>
                 <a class="brand" href="#">
                     <i class="fas fa-store-alt"></i>
-                    <span>Nexus<span class="accent">Shop</span></span>
+                    <span>Amazon<span class="accent">Fashion Shop</span></span>
                 </a>
             </div>
 
