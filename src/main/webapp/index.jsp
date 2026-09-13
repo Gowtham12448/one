@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Flipkart</title>
+    <title>Myntra</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
     <style>
         /* ========== ROOT VARIABLES ========== */
         :root {
-            --bg: #fafaf8;
+            --bg: #fff8fa;
             --bg-card: #ffffff;
-            --primary: #1a1a2e;
-            --primary-light: #2d2d44;
-            --accent: #e07a5f;
-            --accent-light: #f4d0c4;
-            --accent-dark: #c05a3e;
-            --muted: #6b6b7a;
-            --muted-light: #a0a0b0;
-            --surface: #f0efed;
-            --success: #2a9d8f;
-            --warning: #e9c46a;
+            --primary: #282c3f;
+            --primary-light: #3d4157;
+            --accent: #ff3f6c;         /* Myntra pink */
+            --accent-light: #ffd6e0;
+            --accent-dark: #d92b56;
+            --muted: #696e79;
+            --muted-light: #a8acb9;
+            --surface: #f4f4f6;
+            --success: #14a76c;
+            --warning: #ffb400;
             --radius: 16px;
             --radius-sm: 10px;
-            --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
-            --shadow-hover: 0 12px 48px rgba(26, 26, 46, 0.10);
+            --shadow: 0 4px 24px rgba(40, 44, 63, 0.06);
+            --shadow-hover: 0 12px 48px rgba(255, 63, 108, 0.15);
             --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             --container: 1240px;
         }
@@ -113,7 +113,7 @@
             background: var(--accent-dark);
             border-color: var(--accent-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(224, 122, 95, 0.30);
+            box-shadow: 0 8px 24px rgba(255, 63, 108, 0.35);
         }
         .btn-secondary {
             background: var(--primary);
@@ -124,12 +124,12 @@
             background: var(--primary-light);
             border-color: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 26, 46, 0.20);
+            box-shadow: 0 8px 24px rgba(40, 44, 63, 0.20);
         }
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            border-color: rgba(26, 26, 46, 0.15);
+            border-color: rgba(40, 44, 63, 0.15);
         }
         .btn-outline:hover {
             background: var(--primary);
@@ -157,10 +157,10 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(26, 26, 46, 0.04);
+            border-bottom: 1px solid rgba(40, 44, 63, 0.06);
         }
         .header-inner {
             display: flex;
@@ -234,7 +234,7 @@
         }
         .header-actions .icon-btn:hover {
             background: var(--surface);
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .cart-wrap {
@@ -269,7 +269,7 @@
         .search-wrap:focus-within {
             border-color: var(--accent);
             background: #fff;
-            box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.10);
+            box-shadow: 0 0 0 4px rgba(255, 63, 108, 0.10);
         }
         .search-wrap input {
             border: 0;
@@ -310,7 +310,7 @@
         #mobileMenu {
             display: none;
             background: #fff;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(40, 44, 63, 0.06);
             padding: 12px 0 20px;
         }
         #mobileMenu ul {
@@ -347,7 +347,7 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 20px 24px 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            background: linear-gradient(135deg, #282c3f 0%, #3d4157 100%);
         }
         .hero::before {
             content: '';
@@ -357,14 +357,21 @@
             opacity: 0.35;
             z-index: 0;
         }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(40,44,63,0.55) 0%, rgba(255,63,108,0.25) 100%);
+            z-index: 0;
+        }
         .hero .container {
             position: relative;
             z-index: 1;
         }
         .hero .badge {
             display: inline-block;
-            background: rgba(224, 122, 95, 0.20);
-            color: var(--accent);
+            background: rgba(255, 63, 108, 0.20);
+            color: #ffb6c7;
             padding: 4px 16px;
             border-radius: 999px;
             font-weight: 600;
@@ -381,8 +388,11 @@
             max-width: 640px;
             margin-bottom: 16px;
         }
+        .hero h1 .highlight {
+            color: var(--accent-light);
+        }
         .hero p {
-            color: rgba(255, 255, 255, 0.80);
+            color: rgba(255, 255, 255, 0.85);
             font-size: 17px;
             max-width: 520px;
             margin-bottom: 28px;
@@ -594,7 +604,7 @@
             align-items: center;
             gap: 4px;
             font-size: 13px;
-            color: #f5a623;
+            color: var(--warning);
         }
         .product-card .body .rating span {
             color: var(--muted);
@@ -750,7 +760,7 @@
             box-shadow: var(--shadow-hover);
         }
         .testimonial-card .stars {
-            color: #f5a623;
+            color: var(--warning);
             font-size: 16px;
             letter-spacing: 2px;
             margin-bottom: 10px;
@@ -794,6 +804,23 @@
             justify-content: space-between;
             gap: 32px;
             flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter-wrap::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,63,108,0.35) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .newsletter-wrap .text {
+            position: relative;
+            z-index: 1;
         }
         .newsletter-wrap .text h3 {
             font-size: 26px;
@@ -810,6 +837,8 @@
             flex-wrap: wrap;
             flex: 1;
             max-width: 480px;
+            position: relative;
+            z-index: 1;
         }
         .newsletter-wrap form input {
             flex: 1;
@@ -851,7 +880,7 @@
         footer {
             margin-top: 16px;
             padding: 44px 0 28px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(40, 44, 63, 0.06);
         }
         .footer-grid {
             display: grid;
@@ -912,7 +941,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(40, 44, 63, 0.06);
             color: var(--muted-light);
             font-size: 13px;
         }
@@ -1127,8 +1156,8 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <a class="brand" href="#">
-                    <i class="fas fa-store-alt"></i>
-                    <span>Flipkart<span class="accent">Shopping</span></span>
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Myntra<span class="accent">Fashion</span></span>
                 </a>
             </div>
 
@@ -1184,7 +1213,7 @@
         <section class="hero" aria-label="Hero banner">
             <div class="container">
                 <div class="badge"><i class="fas fa-sparkles"></i> New Collection 2026</div>
-                <h1>Discover Premium <br>Essentials</h1>
+                <h1>Discover Premium <br><span class="highlight">Fashion Essentials</span></h1>
                 <p>Curated fashion, tech & accessories with free shipping on your first order. Limited-time deals await.</p>
                 <div class="actions">
                     <button class="btn btn-primary" id="shopNow"><i class="fas fa-arrow-right"></i> Shop Now</button>
@@ -1304,10 +1333,10 @@
             <div class="footer-grid">
                 <div class="brand-col">
                     <div class="brand">
-                        <i class="fas fa-store-alt"></i>
-                        <span>Nexus<span class="accent">Shop</span></span>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Myntra<span class="accent">Fashion</span></span>
                     </div>
-                    <p>Modern e‑commerce demo built with care. Quality products, seamless experience.</p>
+                    <p>Modern fashion e‑commerce demo built with care. Quality products, seamless experience.</p>
                     <div class="socials">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -1343,7 +1372,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; <span id="year"></span> NexusShop. All rights reserved.
+                &copy; <span id="year"></span> MyntraFashion. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1699,7 +1728,7 @@
             }
         });
 
-        console.log('🚀 NexusShop — user‑friendly e‑commerce demo loaded.');
+        console.log('🚀 MyntraFashion — user‑friendly e‑commerce demo loaded.');
     </script>
 
 </body>
