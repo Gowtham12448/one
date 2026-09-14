@@ -25,7 +25,6 @@ button{cursor:pointer;font-family:inherit;border:none;background:none;color:inhe
 input,select{font-family:inherit}
 .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
 
-/* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:var(--radius);font-weight:600;font-size:15px;transition:var(--transition);border:2px solid transparent}
 .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
 .btn-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(248,68,100,.35)}
@@ -38,7 +37,6 @@ input,select{font-family:inherit}
 .btn-outline:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
 .btn-sm{padding:8px 16px;font-size:13px}
 
-/* Header */
 header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;min-height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.5px;color:var(--primary);flex-shrink:0;cursor:pointer}
@@ -57,8 +55,7 @@ nav.main-nav li a i{font-size:14px}
 .search-wrap:focus-within{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(248,68,100,.1)}
 .search-wrap input{border:0;background:transparent;outline:none;width:100%;padding:10px 0;font-size:14px;color:var(--primary)}
 .search-wrap input::placeholder{color:var(--muted-light)}
-.search-wrap button{padding:8px 0 8px 10px;color:var(--muted);font-size:15px;transition:var(--transition)}
-.search-wrap button:hover{color:var(--accent)}
+.search-wrap button{padding:8px 0 8px 10px;color:var(--muted);font-size:15px}
 .mobile-toggle{display:none;width:40px;height:40px;border-radius:50%;font-size:20px;background:var(--surface);color:var(--primary)}
 #mobileMenu{display:none;background:#fff;border-top:1px solid rgba(0,0,0,.06);padding:12px 0 20px}
 #mobileMenu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
@@ -66,13 +63,12 @@ nav.main-nav li a i{font-size:14px}
 #mobileMenu ul li a:hover{background:var(--surface)}
 #mobileMenu ul li a i{width:22px;color:var(--muted)}
 
-/* Breadcrumb */
 .breadcrumb{display:flex;align-items:center;gap:8px;padding:14px 0;font-size:13px;color:var(--muted);flex-wrap:wrap}
 .breadcrumb a{color:var(--accent);cursor:pointer;font-weight:600}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb i{font-size:10px;color:var(--muted-light)}
+.breadcrumb .current{color:var(--primary);font-weight:600}
 
-/* Hero */
 .hero{position:relative;display:flex;align-items:center;min-height:400px;padding:60px 0;border-radius:var(--radius);overflow:hidden;margin:20px 24px 0;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
 .hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;opacity:.3;z-index:0}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,.6) 0%,rgba(248,68,100,.25) 100%);z-index:0}
@@ -83,34 +79,34 @@ nav.main-nav li a i{font-size:14px}
 .hero p{color:rgba(255,255,255,.85);font-size:17px;max-width:520px;margin-bottom:28px;line-height:1.6}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
 
-/* Section */
 .section{padding:48px 0}
 .section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
 .section-header .title-group h2{font-size:26px;font-weight:700;letter-spacing:-.3px}
 .section-header .title-group p{color:var(--muted);margin-top:4px;font-size:15px}
-.section-header .view-all{font-weight:600;color:var(--accent);display:flex;align-items:center;gap:6px;font-size:14px;transition:var(--transition);white-space:nowrap;cursor:pointer}
+.section-header .view-all{font-weight:600;color:var(--accent);display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer}
 .section-header .view-all:hover{gap:12px;color:var(--accent-dark)}
+.clear-filter{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);color:var(--accent);padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;transition:var(--transition);margin-left:12px}
+.clear-filter:hover{background:var(--accent);color:#fff}
 
-/* Locations */
 .locations-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.loc-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow);transition:var(--transition);cursor:pointer;border:2px solid transparent;display:flex;align-items:center;gap:12px}
+.loc-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow);transition:var(--transition);cursor:pointer;border:2px solid transparent;display:flex;align-items:center;gap:12px;position:relative}
 .loc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--accent-light)}
 .loc-card.active{border-color:var(--accent);background:var(--accent-light)}
 .loc-card .loc-icon{width:44px;height:44px;border-radius:50%;background:var(--accent-light);display:grid;place-items:center;font-size:18px;color:var(--accent);transition:var(--transition);flex-shrink:0}
 .loc-card:hover .loc-icon,.loc-card.active .loc-icon{background:var(--accent);color:#fff}
 .loc-card .loc-info h4{font-size:14px;font-weight:600;line-height:1.2}
 .loc-card .loc-info .count{font-size:12px;color:var(--muted);margin-top:2px}
+.loc-card .loc-info .playing{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px}
 
-/* Movies */
 .movies-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .movie-card{background:var(--bg-card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);display:flex;flex-direction:column;border:2px solid transparent;cursor:pointer}
 .movie-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:var(--accent-light)}
 .movie-card .img-wrap{position:relative;overflow:hidden;background:#1a1a2e;aspect-ratio:2/3}
 .movie-card .img-wrap img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
 .movie-card:hover .img-wrap img{transform:scale(1.04)}
-.movie-card .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px}
+.movie-card .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700}
 .movie-card .badge.rating{background:var(--warning);color:var(--primary);left:auto;right:10px}
-.movie-card .wish-btn{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:15px;color:var(--muted);transition:var(--transition);backdrop-filter:blur(4px)}
+.movie-card .wish-btn{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:15px;color:var(--muted);transition:var(--transition)}
 .movie-card .badge.rating ~ .wish-btn{top:48px}
 .movie-card .wish-btn:hover{background:#fff;color:var(--accent);transform:scale(1.1)}
 .movie-card .body{padding:14px 16px 12px;flex:1;display:flex;flex-direction:column;gap:4px}
@@ -118,12 +114,12 @@ nav.main-nav li a i{font-size:14px}
 .movie-card .body h5{font-size:16px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .movie-card .body .meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-top:2px}
 .movie-card .body .rating{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--warning);font-weight:600}
+.movie-card .body .cities-line{font-size:12px;color:var(--accent);font-weight:600;margin-top:4px;display:flex;align-items:center;gap:4px}
 .movie-card .footer{padding:0 16px 16px;display:flex;gap:8px}
 .movie-card .footer .book-btn{flex:1;padding:10px;border-radius:var(--radius-sm);background:var(--accent);color:#fff;font-weight:600;font-size:14px;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:8px}
 .movie-card .footer .book-btn:hover{background:var(--accent-dark);transform:scale(1.02)}
 
-/* Theaters */
-.theaters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.theaters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
 .theater-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);transition:var(--transition);border-left:4px solid var(--accent);cursor:pointer}
 .theater-card:hover{box-shadow:var(--shadow-hover);transform:translateX(4px)}
 .theater-card h4{font-size:16px;font-weight:600;margin-bottom:4px}
@@ -131,16 +127,34 @@ nav.main-nav li a i{font-size:14px}
 .theater-card .address i{color:var(--accent);margin-top:3px;font-size:12px}
 .theater-card .amenities{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .theater-card .amenities span{font-size:11px;background:var(--surface);padding:3px 10px;border-radius:999px;color:var(--muted);font-weight:500}
+.theater-card .now-playing{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(0,0,0,.08)}
+.theater-card .now-playing .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:6px}
+.theater-card .now-playing .chips{display:flex;flex-wrap:wrap;gap:6px}
+.theater-card .now-playing .chip{font-size:11px;background:var(--accent-light);color:var(--accent);padding:3px 10px;border-radius:999px;font-weight:600}
 .theater-card .select-hint{margin-top:12px;font-size:13px;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:6px}
 
-/* Showtimes */
 .showtimes-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed rgba(0,0,0,.1)}
 .showtime-btn{padding:8px 16px;border-radius:var(--radius-sm);border:2px solid var(--accent);background:#fff;color:var(--accent);font-weight:600;font-size:13px;transition:var(--transition)}
 .showtime-btn:hover{background:var(--accent);color:#fff}
 .showtime-btn.selected{background:var(--accent);color:#fff}
 .showtime-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;width:100%;margin-bottom:4px}
 
-/* Modal */
+.movie-pick-list{display:grid;grid-template-columns:1fr;gap:10px}
+.movie-pick{display:flex;gap:14px;padding:12px;border-radius:var(--radius);border:2px solid var(--surface);cursor:pointer;transition:var(--transition);align-items:center}
+.movie-pick:hover{border-color:var(--accent);background:var(--accent-light)}
+.movie-pick img{width:60px;height:80px;object-fit:cover;border-radius:var(--radius-sm);flex-shrink:0}
+.movie-pick .info{flex:1}
+.movie-pick .info h5{font-size:15px;font-weight:600;margin-bottom:4px}
+.movie-pick .info .meta{font-size:12px;color:var(--muted);margin-bottom:4px}
+.movie-pick .info .rating{font-size:12px;color:var(--warning);font-weight:600}
+.movie-pick .arrow{color:var(--accent);font-size:18px}
+
+.city-pick-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.city-pick{padding:14px 16px;border-radius:var(--radius);border:2px solid var(--surface);cursor:pointer;transition:var(--transition);text-align:center}
+.city-pick:hover{border-color:var(--accent);background:var(--accent-light)}
+.city-pick h5{font-size:14px;font-weight:600;margin-bottom:2px}
+.city-pick .count{font-size:12px;color:var(--muted)}
+
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
 .modal-overlay.active{display:flex}
 .modal{background:#fff;border-radius:var(--radius);max-width:900px;width:100%;max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4)}
@@ -152,7 +166,6 @@ nav.main-nav li a i{font-size:14px}
 .modal-body{padding:24px}
 .modal-footer{padding:16px 24px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;bottom:0;background:#fff}
 
-/* Seat map */
 .screen-curve{width:80%;max-width:600px;height:8px;background:linear-gradient(to bottom,#c8ccd4,#e8ebf0);margin:0 auto 8px;border-radius:50% 50% 0 0/100% 100% 0 0;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .screen-label{text-align:center;font-size:12px;color:var(--muted);letter-spacing:3px;font-weight:600;margin-bottom:32px}
 .seat-map{display:flex;flex-direction:column;gap:8px;align-items:center;padding:20px 0}
@@ -165,8 +178,6 @@ nav.main-nav li a i{font-size:14px}
 .seat.premium{background:#fff3e0;border-color:#ffcc80}
 .seat.premium:hover:not(.booked):not(.selected){background:#ffe0b2;border-color:#ffb74d}
 .seat.premium.selected{background:var(--success);border-color:var(--success)}
-
-/* Seat legend */
 .seat-legend{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:24px;padding:16px;background:var(--surface);border-radius:var(--radius)}
 .legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .legend-box{width:20px;height:20px;border-radius:4px;border:1px solid #d1d6de}
@@ -175,14 +186,12 @@ nav.main-nav li a i{font-size:14px}
 .legend-box.booked{background:#c8ccd4;border-color:#c8ccd4}
 .legend-box.premium{background:#fff3e0;border-color:#ffcc80}
 
-/* Order summary */
 .order-summary{display:flex;align-items:center;gap:24px;flex-wrap:wrap;flex:1}
 .order-summary .item{display:flex;flex-direction:column;gap:2px}
 .order-summary .item .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
 .order-summary .item .value{font-size:15px;font-weight:700;color:var(--primary)}
 .order-summary .item .value.accent{color:var(--accent)}
 
-/* Payment form */
 .form-group{margin-bottom:18px}
 .form-group label{display:block;font-size:13px;font-weight:600;color:var(--primary);margin-bottom:6px}
 .form-group input,.form-group select{width:100%;padding:12px 14px;border-radius:var(--radius-sm);border:2px solid var(--surface);background:#fff;font-size:14px;color:var(--primary);outline:none;transition:var(--transition)}
@@ -194,7 +203,6 @@ nav.main-nav li a i{font-size:14px}
 .payment-method.active{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
 .payment-method i{display:block;font-size:22px;margin-bottom:6px}
 
-/* Confirmation */
 .confirmation{text-align:center;padding:40px 24px}
 .confirmation .check-circle{width:80px;height:80px;border-radius:50%;background:var(--success);color:#fff;display:grid;place-items:center;font-size:38px;margin:0 auto 20px;animation:pop .4s ease}
 @keyframes pop{0%{transform:scale(0)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
@@ -212,7 +220,6 @@ nav.main-nav li a i{font-size:14px}
 .ticket-stub .ticket-row .t-value{font-weight:600}
 .confirmation .actions{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* Testimonials */
 .testimonials-scroll{display:flex;gap:20px;overflow-x:auto;padding:8px 4px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
 .testimonials-scroll::-webkit-scrollbar{height:4px}
 .testimonials-scroll::-webkit-scrollbar-thumb{background:var(--accent-light);border-radius:999px}
@@ -225,20 +232,18 @@ nav.main-nav li a i{font-size:14px}
 .testimonial-card .author .name{font-weight:600;font-size:14px}
 .testimonial-card .author .role{font-size:13px;color:var(--muted)}
 
-/* Newsletter */
 .newsletter-wrap{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:var(--radius);padding:48px 56px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
 .newsletter-wrap::before{content:'';position:absolute;top:-50%;right:-10%;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(248,68,100,.35) 0%,transparent 70%);pointer-events:none}
 .newsletter-wrap .text{position:relative;z-index:1}
 .newsletter-wrap .text h3{font-size:26px;font-weight:700;margin-bottom:4px}
 .newsletter-wrap .text p{opacity:.75;font-size:15px}
 .newsletter-wrap form{display:flex;gap:10px;flex-wrap:wrap;flex:1;max-width:480px;position:relative;z-index:1}
-.newsletter-wrap form input{flex:1;min-width:200px;padding:14px 20px;border-radius:var(--radius);border:0;font-size:15px;background:rgba(255,255,255,.12);color:#fff;transition:var(--transition);outline:2px solid transparent}
+.newsletter-wrap form input{flex:1;min-width:200px;padding:14px 20px;border-radius:var(--radius);border:0;font-size:15px;background:rgba(255,255,255,.12);color:#fff;outline:2px solid transparent}
 .newsletter-wrap form input::placeholder{color:rgba(255,255,255,.5)}
 .newsletter-wrap form input:focus{outline-color:var(--accent);background:rgba(255,255,255,.18)}
 .newsletter-wrap form .btn{background:var(--accent);color:#fff;border-color:var(--accent);padding:14px 32px}
 #newsletterMsg{margin-top:12px;font-size:14px;opacity:.9;width:100%}
 
-/* Footer */
 footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);background:#fff}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
 .footer-grid .brand-col .brand{font-size:20px;margin-bottom:8px}
@@ -248,15 +253,13 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
 .footer-grid .brand-col .socials a:hover{background:var(--accent);color:#fff}
 .footer-grid .col h5{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--primary)}
 .footer-grid .col ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.footer-grid .col ul li a{color:var(--muted);font-size:14px;transition:var(--transition)}
+.footer-grid .col ul li a{color:var(--muted);font-size:14px;cursor:pointer}
 .footer-grid .col ul li a:hover{color:var(--accent)}
 .footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(0,0,0,.06);color:var(--muted-light);font-size:13px}
 
-/* Toast */
 .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--primary);color:#fff;padding:14px 24px;border-radius:var(--radius);font-size:14px;font-weight:500;box-shadow:0 8px 30px rgba(0,0,0,.3);opacity:0;transition:all .3s ease;z-index:2000;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
-/* Responsive */
 @media(max-width:1200px){.movies-grid{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}}
 @media(max-width:992px){.hero h1{font-size:36px}.hero{min-height:340px;margin:16px 16px 0;padding:40px 0}.newsletter-wrap{padding:32px 28px;flex-direction:column;text-align:center}.newsletter-wrap form{max-width:100%}.search-wrap{min-width:150px}.payment-methods{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){nav.main-nav{display:none}.mobile-toggle{display:grid;place-items:center}.movies-grid{grid-template-columns:repeat(2,1fr);gap:14px}.locations-grid{grid-template-columns:repeat(2,1fr);gap:10px}.hero h1{font-size:28px}.hero p{font-size:15px}.section-header h2{font-size:22px}.footer-grid{grid-template-columns:1fr;gap:20px}.brand{font-size:18px}.brand i{font-size:20px}.search-wrap{min-width:120px;padding:0 10px 0 14px}.search-wrap input{font-size:13px;padding:8px 0}.header-actions .icon-btn{width:36px;height:36px;font-size:15px}.testimonial-card{flex:0 0 280px}.section{padding:32px 0}.seat{width:22px;height:22px}.modal-body{padding:16px}.form-row{grid-template-columns:1fr}.payment-methods{grid-template-columns:1fr}.screen-curve{width:90%}}
@@ -265,31 +268,30 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="container header-inner">
     <div style="display:flex;align-items:center;gap:12px;">
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
       <div class="brand" onclick="goHome()"><i class="fas fa-ticket-alt"></i><span>Book<span class="accent">MyShow</span></span></div>
     </div>
-    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+    <nav class="main-nav" aria-label="Main navigation">
       <ul>
-        <li><a href="#" class="active" data-nav="movies"><i class="fas fa-film"></i> Movies</a></li>
-        <li><a href="#" data-nav="locations"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
-        <li><a href="#" data-nav="theaters"><i class="fas fa-building"></i> Theaters</a></li>
-        <li><a href="#" data-nav="reviews"><i class="fas fa-star"></i> Reviews</a></li>
+        <li><a data-nav="movies" class="active"><i class="fas fa-film"></i> Movies</a></li>
+        <li><a data-nav="locations"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
+        <li><a data-nav="theaters"><i class="fas fa-building"></i> Theaters</a></li>
+        <li><a data-nav="reviews"><i class="fas fa-star"></i> Reviews</a></li>
       </ul>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;">
       <div class="search-wrap" role="search">
         <input type="search" id="searchInput" placeholder="Search movies..." aria-label="Search">
-        <button id="searchBtn" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
       </div>
       <div class="header-actions">
-        <button class="icon-btn" title="Account" aria-label="Account"><i class="far fa-user"></i></button>
-        <button class="icon-btn" title="Wishlist" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+        <button class="icon-btn" title="Account"><i class="far fa-user"></i></button>
+        <button class="icon-btn" title="Wishlist"><i class="far fa-heart"></i></button>
         <div class="ticket-wrap">
-          <button class="icon-btn" id="ticketBtn" title="My Tickets" aria-label="My Tickets"><i class="fas fa-ticket-alt"></i></button>
+          <button class="icon-btn" id="ticketBtn" title="My Tickets"><i class="fas fa-ticket-alt"></i></button>
           <span class="ticket-count" id="ticketCount">0</span>
         </div>
       </div>
@@ -302,20 +304,17 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
         <li><a data-nav="locations"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
         <li><a data-nav="theaters"><i class="fas fa-building"></i> Theaters</a></li>
         <li><a data-nav="reviews"><i class="fas fa-star"></i> Reviews</a></li>
-        <li><a><i class="far fa-user"></i> Account</a></li>
-        <li><a><i class="far fa-heart"></i> Wishlist</a></li>
       </ul>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- HERO -->
   <section class="hero" id="heroSection" aria-label="Hero banner">
     <div class="container">
       <div class="badge"><i class="fas fa-star"></i> Latest Telugu Releases 2026</div>
       <h1>Book Tickets for <br><span class="highlight">Telugu Blockbusters</span></h1>
-      <p>Experience the best of Tollywood in theaters near you. Hyderabad, Visakhapatnam, Vijayawada, Guntur and more.</p>
+      <p>Pick a movie or a city to begin. We'll guide you through theaters, showtimes, seats and payment.</p>
       <div class="actions">
         <button class="btn btn-primary" onclick="scrollToSection('movies')"><i class="fas fa-film"></i> Browse Movies</button>
         <button class="btn btn-ghost" onclick="scrollToSection('locations')"><i class="fas fa-map-marker-alt"></i> Pick a City</button>
@@ -323,27 +322,24 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
     </div>
   </section>
 
-  <!-- BREADCRUMB -->
   <div class="container">
     <div class="breadcrumb" id="breadcrumb">
       <a onclick="goHome()"><i class="fas fa-home"></i> Home</a>
     </div>
   </div>
 
-  <!-- LOCATIONS -->
   <section class="section" id="locations" aria-labelledby="loc-title">
     <div class="container">
       <div class="section-header">
         <div class="title-group">
           <h2 id="loc-title">Select Your City</h2>
-          <p>Andhra Pradesh &amp; Telangana locations</p>
+          <p id="loc-subtitle">Andhra Pradesh &amp; Telangana locations</p>
         </div>
       </div>
       <div class="locations-grid" id="locationsGrid"></div>
     </div>
   </section>
 
-  <!-- MOVIES -->
   <section class="section" id="movies" aria-labelledby="movie-title">
     <div class="container">
       <div class="section-header">
@@ -356,20 +352,18 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
     </div>
   </section>
 
-  <!-- THEATERS -->
   <section class="section" id="theaters" aria-labelledby="th-title">
     <div class="container">
       <div class="section-header">
         <div class="title-group">
-          <h2 id="th-title">Popular Theaters</h2>
-          <p id="theater-subtitle">Real cinemas across AP &amp; Telangana</p>
+          <h2 id="th-title">Theaters</h2>
+          <p id="theater-subtitle">Pick a city or a movie to see available theaters</p>
         </div>
       </div>
       <div class="theaters-grid" id="theatersGrid"></div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section class="section" id="reviews" aria-labelledby="test-title">
     <div class="container">
       <div class="section-header">
@@ -382,7 +376,6 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section class="section" aria-labelledby="news-title">
     <div class="container">
       <div class="newsletter-wrap">
@@ -400,7 +393,6 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
   </section>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -414,83 +406,63 @@ footer{margin-top:16px;padding:44px 0 28px;border-top:1px solid rgba(0,0,0,.06);
           <a aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="col">
-        <h5>Company</h5>
-        <ul>
-          <li><a>About Us</a></li>
-          <li><a>Careers</a></li>
-          <li><a>Press</a></li>
-          <li><a>Blog</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h5>Support</h5>
-        <ul>
-          <li><a>Help Center</a></li>
-          <li><a>Cancellation</a></li>
-          <li><a>Refunds</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a>Privacy Policy</a></li>
-          <li><a>Terms</a></li>
-          <li><a>Cookies</a></li>
-        </ul>
-      </div>
+      <div class="col"><h5>Company</h5><ul><li><a>About Us</a></li><li><a>Careers</a></li><li><a>Press</a></li><li><a>Blog</a></li></ul></div>
+      <div class="col"><h5>Support</h5><ul><li><a>Help Center</a></li><li><a>Cancellation</a></li><li><a>Refunds</a></li><li><a>Contact</a></li></ul></div>
+      <div class="col"><h5>Legal</h5><ul><li><a>Privacy Policy</a></li><li><a>Terms</a></li><li><a>Cookies</a></li></ul></div>
     </div>
     <div class="footer-bottom">&copy; <span id="year"></span> BookMyShow Clone - Telugu Cinema Demo. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modalContent"></div>
-</div>
-
-<!-- TOAST -->
+<div class="modal-overlay" id="modalOverlay"><div class="modal" id="modalContent"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
 /* ===================== DATA ===================== */
 var LOCATIONS = [
-  { id:'hyd', name:'Hyderabad', count:48 },
-  { id:'vzg', name:'Visakhapatnam', count:22 },
-  { id:'vjw', name:'Vijayawada', count:18 },
-  { id:'gnt', name:'Guntur', count:14 },
-  { id:'nlr', name:'Nellore', count:10 },
-  { id:'vzm', name:'Vizianagaram', count:8 },
-  { id:'skm', name:'Srikakulam', count:6 },
-  { id:'pvp', name:'Parvathipuram', count:4 },
-  { id:'bbl', name:'Bobbili', count:3 },
-  { id:'rjp', name:'Rajahmundry', count:9 },
-  { id:'kkd', name:'Kakinada', count:7 },
-  { id:'tpt', name:'Tirupati', count:11 },
-  { id:'wgl', name:'Warangal', count:9 },
-  { id:'nzb', name:'Nizamabad', count:5 },
-  { id:'kmm', name:'Khammam', count:4 },
-  { id:'krm', name:'Karimnagar', count:6 }
+  { id:'hyd', name:'Hyderabad', count:5 },
+  { id:'vzg', name:'Visakhapatnam', count:4 },
+  { id:'vjw', name:'Vijayawada', count:3 },
+  { id:'gnt', name:'Guntur', count:2 },
+  { id:'nlr', name:'Nellore', count:1 },
+  { id:'vzm', name:'Vizianagaram', count:1 },
+  { id:'skm', name:'Srikakulam', count:1 },
+  { id:'pvp', name:'Parvathipuram', count:1 },
+  { id:'bbl', name:'Bobbili', count:1 },
+  { id:'rjp', name:'Rajahmundry', count:1 },
+  { id:'kkd', name:'Kakinada', count:1 },
+  { id:'tpt', name:'Tirupati', count:1 },
+  { id:'wgl', name:'Warangal', count:1 },
+  { id:'nzb', name:'Nizamabad', count:1 },
+  { id:'kmm', name:'Khammam', count:0 },
+  { id:'krm', name:'Karimnagar', count:0 }
 ];
 
 var MOVIES = [
   { id:1, title:'Pushpa 3: The Rampage', genre:'Action / Drama', lang:'Telugu', rating:9.2, votes:'128K',
-    cert:'UA', duration:'2h 45m', img:'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=500&q=80', badge:'Blockbuster' },
+    cert:'UA', duration:'2h 45m', img:'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=500&q=80', badge:'Blockbuster',
+    cities:['hyd','vzg','vjw','gnt','nlr','vzm','skm','pvp','bbl','rjp','kkd','tpt','wgl','nzb'] },
   { id:2, title:'RRR: Rise of Revolution', genre:'Action / Epic', lang:'Telugu', rating:9.0, votes:'210K',
-    cert:'UA', duration:'3h 00m', img:'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=500&q=80', badge:'Re-Release' },
+    cert:'UA', duration:'3h 00m', img:'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=500&q=80', badge:'Re-Release',
+    cities:['hyd','vzg','vjw','gnt','tpt','wgl'] },
   { id:3, title:'Kalki 2898 AD - Part 2', genre:'Sci-Fi / Mythological', lang:'Telugu', rating:9.5, votes:'340K',
-    cert:'UA', duration:'2h 55m', img:'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=500&q=80', badge:'Trending' },
+    cert:'UA', duration:'2h 55m', img:'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=500&q=80', badge:'Trending',
+    cities:['hyd','vzg','vjw','gnt','nlr','tpt','wgl','rjp','kkd'] },
   { id:4, title:'Baahubali: The Beginning', genre:'Fantasy / Action', lang:'Telugu', rating:9.1, votes:'180K',
-    cert:'U', duration:'2h 40m', img:'https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&w=500&q=80', badge:'Classic' },
+    cert:'U', duration:'2h 40m', img:'https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&w=500&q=80', badge:'Classic',
+    cities:['hyd','vzg','vjw','gnt','nlr','vzm','skm','pvp','bbl'] },
   { id:5, title:'Salaar: Part 2', genre:'Action / Crime', lang:'Telugu', rating:8.8, votes:'156K',
-    cert:'A', duration:'2h 50m', img:'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=80', badge:'New' },
+    cert:'A', duration:'2h 50m', img:'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=80', badge:'New',
+    cities:['hyd','vzg','vjw','gnt','tpt','wgl','nzb'] },
   { id:6, title:'Devara: Part 2', genre:'Action / Drama', lang:'Telugu', rating:8.9, votes:'142K',
-    cert:'UA', duration:'2h 48m', img:'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=500&q=80', badge:'New' },
+    cert:'UA', duration:'2h 48m', img:'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=500&q=80', badge:'New',
+    cities:['hyd','vzg','vjw','gnt','nlr','rjp','kkd','tpt'] },
   { id:7, title:'Game Changer', genre:'Political / Thriller', lang:'Telugu', rating:8.7, votes:'98K',
-    cert:'UA', duration:'2h 38m', img:'https://images.unsplash.com/photo-1574267432553-4b4628081c31?auto=format&fit=crop&w=500&q=80', badge:'Now Showing' },
+    cert:'UA', duration:'2h 38m', img:'https://images.unsplash.com/photo-1574267432553-4b4628081c31?auto=format&fit=crop&w=500&q=80', badge:'Now Showing',
+    cities:['hyd','vzg','vjw','gnt','wgl','nzb'] },
   { id:8, title:'Hanuman: Jai Sri Ram', genre:'Devotional / Fantasy', lang:'Telugu', rating:9.3, votes:'220K',
-    cert:'U', duration:'2h 30m', img:'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=80', badge:'Family' }
+    cert:'U', duration:'2h 30m', img:'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=80', badge:'Family',
+    cities:['hyd','vzg','vjw','gnt','nlr','vzm','skm','pvp','bbl','rjp','kkd','tpt'] }
 ];
 
 var THEATERS = [
@@ -536,7 +508,7 @@ var state = {
   selectedTheater: null,
   selectedShowtime: null,
   selectedSeats: [],
-  bookedSeats: {},   // key: theaterId|showtime -> array of seat ids
+  bookedSeats: {},
   ticketCount: 0,
   myTickets: []
 };
@@ -579,8 +551,9 @@ function goHome(){
   renderMovies(MOVIES);
   renderTheaters(THEATERS);
   updateBreadcrumb();
+  document.getElementById('loc-subtitle').textContent = 'Andhra Pradesh & Telangana locations';
   document.getElementById('movie-subtitle').textContent = 'Latest Tollywood releases in theaters';
-  document.getElementById('theater-subtitle').textContent = 'Real cinemas across AP & Telangana';
+  document.getElementById('theater-subtitle').textContent = 'Pick a city or a movie to see available theaters';
   document.getElementById('heroSection').style.display = '';
   scrollToSection('movies');
 }
@@ -598,41 +571,47 @@ function updateTicketCount(){
 function updateBreadcrumb(){
   var html = '<a onclick="goHome()"><i class="fas fa-home"></i> Home</a>';
   if(state.selectedCity){
-    html += '<i class="fas fa-chevron-right"></i><span>' + escapeHtml(state.selectedCity.name) + '</span>';
+    html += '<i class="fas fa-chevron-right"></i>';
+    if(state.selectedMovie || state.selectedTheater){
+      html += '<a onclick="jumpToCity()">' + escapeHtml(state.selectedCity.name) + '</a>';
+    } else {
+      html += '<span class="current">' + escapeHtml(state.selectedCity.name) + '</span>';
+    }
   }
   if(state.selectedMovie){
-    html += '<i class="fas fa-chevron-right"></i><span>' + escapeHtml(state.selectedMovie.title) + '</span>';
+    html += '<i class="fas fa-chevron-right"></i>';
+    if(state.selectedTheater){
+      html += '<a onclick="jumpToMovie()">' + escapeHtml(state.selectedMovie.title) + '</a>';
+    } else {
+      html += '<span class="current">' + escapeHtml(state.selectedMovie.title) + '</span>';
+    }
   }
   if(state.selectedTheater){
-    html += '<i class="fas fa-chevron-right"></i><span>' + escapeHtml(state.selectedTheater.name) + '</span>';
-  }
-  if(state.selectedShowtime){
-    html += '<i class="fas fa-chevron-right"></i><span>' + escapeHtml(state.selectedShowtime) + '</span>';
+    html += '<i class="fas fa-chevron-right"></i><span class="current">' + escapeHtml(state.selectedTheater.name) + '</span>';
   }
   breadcrumb.innerHTML = html;
 }
-function generateBookedSeats(theaterId, showtime){
-  var key = theaterId + '|' + showtime;
-  if(state.bookedSeats[key]) return state.bookedSeats[key];
-  // Deterministic pseudo-random occupancy based on key string
-  var seats = [];
-  var hash = 0;
-  for(var i=0; i<key.length; i++) hash = ((hash<<5) - hash + key.charCodeAt(i)) | 0;
-  var totalRows = 8, cols = 14;
-  for(var r=0; r<totalRows; r++){
-    for(var c=0; c<cols; c++){
-      var seed = Math.abs(hash + r*31 + c*17);
-      if(seed % 5 === 0) seats.push(String.fromCharCode(65+r) + (c+1));
-    }
-  }
-  state.bookedSeats[key] = seats;
-  return seats;
+
+/* ===================== HELPERS: movies playing at theater / cities for movie ===================== */
+function moviesAtTheater(theater){
+  // A movie is playing at a theater if the theater's city is in the movie's cities list
+  return MOVIES.filter(function(m){ return m.cities.indexOf(theater.cityId) !== -1; });
+}
+function citiesForMovie(movie){
+  return LOCATIONS.filter(function(loc){ return movie.cities.indexOf(loc.id) !== -1; });
+}
+function theatersForMovieInCity(movie, cityId){
+  return THEATERS.filter(function(t){
+    return t.cityId === cityId && movie.cities.indexOf(cityId) !== -1;
+  });
 }
 
 /* ===================== RENDER: LOCATIONS ===================== */
 function renderLocations(){
   locationsGrid.innerHTML = '';
   LOCATIONS.forEach(function(loc){
+    // Count how many movies are playing in this city
+    var playingHere = MOVIES.filter(function(m){ return m.cities.indexOf(loc.id) !== -1; }).length;
     var el = document.createElement('div');
     el.className = 'loc-card' + (state.selectedCity && state.selectedCity.id === loc.id ? ' active' : '');
     el.innerHTML =
@@ -640,6 +619,7 @@ function renderLocations(){
       '<div class="loc-info">' +
         '<h4>' + escapeHtml(loc.name) + '</h4>' +
         '<div class="count">' + loc.count + ' theaters</div>' +
+        (playingHere ? '<div class="playing">' + playingHere + ' movies playing</div>' : '') +
       '</div>';
     el.addEventListener('click', function(){ selectCity(loc); });
     locationsGrid.appendChild(el);
@@ -650,14 +630,49 @@ function selectCity(loc){
   state.selectedTheater = null;
   state.selectedShowtime = null;
   state.selectedSeats = [];
-  renderLocations();
-  // Filter theaters by city
+  // If a movie is already selected, filter theaters to that movie in this city
+  // Otherwise show all theaters in the city
   var cityTheaters = THEATERS.filter(function(t){ return t.cityId === loc.id; });
+  if(state.selectedMovie){
+    cityTheaters = cityTheaters.filter(function(t){
+      return state.selectedMovie.cities.indexOf(loc.id) !== -1;
+    });
+    document.getElementById('theater-subtitle').textContent =
+      'Theaters showing ' + state.selectedMovie.title + ' in ' + loc.name;
+  } else {
+    document.getElementById('theater-subtitle').textContent = cityTheaters.length + ' theaters in ' + loc.name;
+  }
+  renderLocations();
   renderTheaters(cityTheaters);
-  document.getElementById('theater-subtitle').textContent = cityTheaters.length + ' theaters in ' + loc.name;
   updateBreadcrumb();
   showToast('Showing theaters in ' + loc.name);
   scrollToSection('theaters');
+}
+function jumpToCity(){
+  // Navigate back to just the city view
+  if(state.selectedCity){
+    state.selectedMovie = null;
+    state.selectedTheater = null;
+    state.selectedShowtime = null;
+    state.selectedSeats = [];
+    var cityTheaters = THEATERS.filter(function(t){ return t.cityId === state.selectedCity.id; });
+    renderMovies(MOVIES);
+    renderTheaters(cityTheaters);
+    document.getElementById('movie-subtitle').textContent = 'Latest Tollywood releases in theaters';
+    document.getElementById('theater-subtitle').textContent = cityTheaters.length + ' theaters in ' + state.selectedCity.name;
+    updateBreadcrumb();
+    scrollToSection('theaters');
+  }
+}
+function jumpToMovie(){
+  // Navigate back to the movie view (cities playing this movie)
+  if(state.selectedMovie){
+    state.selectedTheater = null;
+    state.selectedShowtime = null;
+    state.selectedSeats = [];
+    openCitiesForMovieModal(state.selectedMovie);
+    updateBreadcrumb();
+  }
 }
 
 /* ===================== RENDER: MOVIES ===================== */
@@ -675,6 +690,7 @@ function renderMovies(list){
     for(var i=0;i<fullStars;i++) stars += '&#9733;';
     for(var j=fullStars;j<5;j++) stars += '&#9734;';
     var badgeHtml = m.badge ? '<span class="badge">' + escapeHtml(m.badge) + '</span>' : '';
+    var cityCount = m.cities.length;
     el.innerHTML =
       '<div class="img-wrap">' +
         '<img src="' + m.img + '" alt="' + escapeHtml(m.title) + '" loading="lazy">' +
@@ -687,6 +703,7 @@ function renderMovies(list){
         '<h5>' + escapeHtml(m.title) + '</h5>' +
         '<div class="meta"><i class="fas fa-clock"></i> ' + m.duration + ' / ' + m.cert + '</div>' +
         '<div class="rating">' + stars + ' <span style="color:var(--muted);font-weight:400;">(' + m.votes + ' votes)</span></div>' +
+        '<div class="cities-line"><i class="fas fa-map-marker-alt"></i> Playing in ' + cityCount + ' cities</div>' +
       '</div>' +
       '<div class="footer">' +
         '<button class="book-btn" data-id="' + m.id + '"><i class="fas fa-ticket-alt"></i> Book Tickets</button>' +
@@ -719,25 +736,68 @@ function renderMovies(list){
 }
 function selectMovie(movie){
   state.selectedMovie = movie;
+  state.selectedTheater = null;
+  state.selectedShowtime = null;
+  state.selectedSeats = [];
   updateBreadcrumb();
-  // If a city is selected, show theaters in that city; else prompt to pick city
-  if(state.selectedCity){
-    var cityTheaters = THEATERS.filter(function(t){ return t.cityId === state.selectedCity.id; });
-    renderTheaters(cityTheaters);
-    document.getElementById('theater-subtitle').textContent = 'Theaters showing ' + movie.title + ' in ' + state.selectedCity.name;
-    showToast('Pick a theater for ' + movie.title);
-    scrollToSection('theaters');
-  } else {
-    showToast('Now pick a city to see theaters');
-    scrollToSection('locations');
-  }
+  // Show modal with all cities playing this movie
+  openCitiesForMovieModal(movie);
+}
+
+/* ===================== MODAL: CITIES PLAYING A MOVIE ===================== */
+function openCitiesForMovieModal(movie){
+  var cities = citiesForMovie(movie);
+  var html =
+    '<div class="modal-header">' +
+      '<div>' +
+        '<h3>Where is "' + escapeHtml(movie.title) + '" playing?</h3>' +
+        '<div class="subtitle">Pick a city to see theaters and showtimes</div>' +
+      '</div>' +
+      '<button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>' +
+    '</div>' +
+    '<div class="modal-body">' +
+      '<div class="movie-pick" style="cursor:default;border-color:var(--accent-light);background:var(--accent-light);">' +
+        '<img src="' + movie.img + '" alt="' + escapeHtml(movie.title) + '">' +
+        '<div class="info">' +
+          '<h5>' + escapeHtml(movie.title) + '</h5>' +
+          '<div class="meta">' + escapeHtml(movie.genre) + ' / ' + movie.duration + ' / ' + movie.cert + '</div>' +
+          '<div class="rating"><i class="fas fa-star"></i> ' + movie.rating + ' (' + movie.votes + ')</div>' +
+        '</div>' +
+      '</div>' +
+      '<h4 style="margin:20px 0 12px;font-size:15px;">Available in ' + cities.length + ' cities</h4>' +
+      '<div class="city-pick-list">' +
+        cities.map(function(c){
+          var theaterCount = theatersForMovieInCity(movie, c.id).length;
+          return '<div class="city-pick" onclick="pickCityForMovie(\'' + c.id + '\')">' +
+            '<h5>' + escapeHtml(c.name) + '</h5>' +
+            '<div class="count">' + theaterCount + ' theaters</div>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  modalContent.innerHTML = html;
+  modalOverlay.classList.add('active');
+}
+function pickCityForMovie(cityId){
+  var city = LOCATIONS.filter(function(l){ return l.id === cityId; })[0];
+  if(!city) return;
+  state.selectedCity = city;
+  var theaters = theatersForMovieInCity(state.selectedMovie, cityId);
+  closeModal();
+  renderLocations();
+  renderTheaters(theaters);
+  document.getElementById('theater-subtitle').textContent =
+    'Theaters showing ' + state.selectedMovie.title + ' in ' + city.name;
+  updateBreadcrumb();
+  showToast('Found ' + theaters.length + ' theaters in ' + city.name);
+  scrollToSection('theaters');
 }
 
 /* ===================== RENDER: THEATERS ===================== */
 function renderTheaters(list){
   theatersGrid.innerHTML = '';
   if(!list.length){
-    theatersGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);">No theaters found in this city.</p>';
+    theatersGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);">No theaters found. Try a different city or movie.</p>';
     return;
   }
   list.forEach(function(t){
@@ -746,10 +806,22 @@ function renderTheaters(list){
     var tagHtml = t.tags.map(function(tag){
       return '<span>' + escapeHtml(tag) + '</span>';
     }).join('');
+    // Movies playing at this theater (from theater's city)
+    var playingHere = moviesAtTheater(t);
+    // If a movie is selected, highlight it
+    var chipsHtml = playingHere.slice(0, 4).map(function(m){
+      var isSelected = state.selectedMovie && state.selectedMovie.id === m.id;
+      return '<span class="chip" style="' + (isSelected ? 'background:var(--accent);color:#fff;' : '') + '">' + escapeHtml(m.title) + '</span>';
+    }).join('');
+    if(playingHere.length > 4) chipsHtml += '<span class="chip">+' + (playingHere.length - 4) + ' more</span>';
     el.innerHTML =
       '<h4>' + escapeHtml(t.name) + '</h4>' +
       '<div class="address"><i class="fas fa-map-marker-alt"></i><span>' + escapeHtml(t.addr) + '</span></div>' +
       '<div class="amenities">' + tagHtml + '</div>' +
+      '<div class="now-playing">' +
+        '<div class="label"><i class="fas fa-film"></i> Now Playing (' + playingHere.length + ')</div>' +
+        '<div class="chips">' + chipsHtml + '</div>' +
+      '</div>' +
       '<div class="select-hint"><i class="fas fa-arrow-right"></i> Tap to view showtimes</div>';
     el.addEventListener('click', function(){ selectTheater(t); });
     theatersGrid.appendChild(el);
@@ -760,12 +832,18 @@ function selectTheater(theater){
   state.selectedShowtime = null;
   state.selectedSeats = [];
   updateBreadcrumb();
-  openShowtimeModal(theater);
+  // If a movie is already selected, go straight to showtimes.
+  // Otherwise, show the movie picker for this theater.
+  if(state.selectedMovie){
+    openShowtimeModal(theater, state.selectedMovie);
+  } else {
+    openMoviePickerModal(theater);
+  }
 }
 
-/* ===================== MODAL: SHOWTIMES ===================== */
-function openShowtimeModal(theater){
-  var movieTitle = state.selectedMovie ? state.selectedMovie.title : 'Now Showing';
+/* ===================== MODAL: PICK MOVIE AT THEATER ===================== */
+function openMoviePickerModal(theater){
+  var playingHere = moviesAtTheater(theater);
   var html =
     '<div class="modal-header">' +
       '<div>' +
@@ -775,8 +853,52 @@ function openShowtimeModal(theater){
       '<button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>' +
     '</div>' +
     '<div class="modal-body">' +
-      '<h4 style="font-size:16px;margin-bottom:4px;">' + escapeHtml(movieTitle) + '</h4>' +
-      '<p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Select a showtime. Base price: <strong style="color:var(--accent);">Rs ' + theater.price + '</strong> per seat</p>' +
+      '<h4 style="margin-bottom:12px;font-size:15px;">Now playing here - pick a movie</h4>' +
+      '<div class="movie-pick-list">' +
+        playingHere.map(function(m){
+          return '<div class="movie-pick" onclick="pickMovieAtTheater(' + m.id + ')">' +
+            '<img src="' + m.img + '" alt="' + escapeHtml(m.title) + '">' +
+            '<div class="info">' +
+              '<h5>' + escapeHtml(m.title) + '</h5>' +
+              '<div class="meta">' + escapeHtml(m.genre) + ' / ' + m.duration + ' / ' + m.cert + '</div>' +
+              '<div class="rating"><i class="fas fa-star"></i> ' + m.rating + ' (' + m.votes + ' votes)</div>' +
+            '</div>' +
+            '<div class="arrow"><i class="fas fa-chevron-right"></i></div>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  modalContent.innerHTML = html;
+  modalOverlay.classList.add('active');
+}
+function pickMovieAtTheater(movieId){
+  var movie = MOVIES.filter(function(m){ return m.id === movieId; })[0];
+  if(!movie) return;
+  state.selectedMovie = movie;
+  updateBreadcrumb();
+  openShowtimeModal(state.selectedTheater, movie);
+}
+
+/* ===================== MODAL: SHOWTIMES ===================== */
+function openShowtimeModal(theater, movie){
+  var html =
+    '<div class="modal-header">' +
+      '<div>' +
+        '<h3>' + escapeHtml(movie.title) + '</h3>' +
+        '<div class="subtitle">' + escapeHtml(theater.name) + ' - ' + escapeHtml(theater.city) + '</div>' +
+      '</div>' +
+      '<button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>' +
+    '</div>' +
+    '<div class="modal-body">' +
+      '<div class="movie-pick" style="cursor:default;border-color:var(--accent-light);background:var(--accent-light);margin-bottom:20px;">' +
+        '<img src="' + movie.img + '" alt="' + escapeHtml(movie.title) + '">' +
+        '<div class="info">' +
+          '<h5>' + escapeHtml(movie.title) + '</h5>' +
+          '<div class="meta">' + escapeHtml(movie.genre) + ' / ' + movie.duration + ' / ' + movie.cert + '</div>' +
+          '<div class="rating"><i class="fas fa-star"></i> ' + movie.rating + ' (' + movie.votes + ')</div>' +
+        '</div>' +
+      '</div>' +
+      '<p style="color:var(--muted);font-size:13px;margin-bottom:12px;">Base price: <strong style="color:var(--accent);">Rs ' + theater.price + '</strong> per seat</p>' +
       '<div class="showtimes-wrap">' +
         '<div class="showtime-label">Today - ' + new Date().toDateString() + '</div>' +
         SHOWTIMES.map(function(st){
@@ -794,7 +916,23 @@ function selectShowtime(showtime){
   openSeatModal();
 }
 
-/* ===================== MODAL: SEAT SELECTION ===================== */
+/* ===================== SEAT SELECTION ===================== */
+function generateBookedSeats(theaterId, showtime){
+  var key = theaterId + '|' + showtime;
+  if(state.bookedSeats[key]) return state.bookedSeats[key];
+  var seats = [];
+  var hash = 0;
+  for(var i=0; i<key.length; i++) hash = ((hash<<5) - hash + key.charCodeAt(i)) | 0;
+  var totalRows = 8, cols = 14;
+  for(var r=0; r<totalRows; r++){
+    for(var c=0; c<cols; c++){
+      var seed = Math.abs(hash + r*31 + c*17);
+      if(seed % 5 === 0) seats.push(String.fromCharCode(65+r) + (c+1));
+    }
+  }
+  state.bookedSeats[key] = seats;
+  return seats;
+}
 function openSeatModal(){
   var theater = state.selectedTheater;
   var movie = state.selectedMovie || { title:'Now Showing', img:'' };
@@ -805,7 +943,7 @@ function openSeatModal(){
 
   var seatMapHtml = '';
   rows.forEach(function(rowLetter, rowIdx){
-    var isPremium = rowIdx >= 6; // rows G, H are premium
+    var isPremium = rowIdx >= 6;
     var rowHtml = '<div class="seat-row">' +
       '<div class="seat-row-label">' + rowLetter + '</div>';
     for(var c=1; c<=cols; c++){
@@ -850,7 +988,6 @@ function openSeatModal(){
     '</div>';
   modalContent.innerHTML = html;
 
-  // Bind seat clicks
   modalContent.querySelectorAll('.seat').forEach(function(seatBtn){
     seatBtn.addEventListener('click', function(){
       var seatId = this.dataset.seat;
@@ -942,7 +1079,6 @@ function proceedToPayment(){
     '</div>';
   modalContent.innerHTML = html;
 
-  // Bind payment method toggle
   modalContent.querySelectorAll('.payment-method').forEach(function(pm){
     pm.addEventListener('click', function(){
       modalContent.querySelectorAll('.payment-method').forEach(function(x){ x.classList.remove('active'); });
@@ -977,7 +1113,6 @@ function proceedToPayment(){
 }
 
 function processPayment(amount){
-  // Validate minimal inputs based on method
   var activeMethod = modalContent.querySelector('.payment-method.active');
   var method = activeMethod ? activeMethod.dataset.method : 'card';
   if(method === 'card'){
@@ -1004,12 +1139,10 @@ function processPayment(amount){
   payBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
   setTimeout(function(){
-    // Mark seats as booked
     var key = state.selectedTheater.id + '|' + state.selectedShowtime;
     var bookedList = generateBookedSeats(state.selectedTheater.id, state.selectedShowtime);
     state.selectedSeats.forEach(function(s){ if(bookedList.indexOf(s) === -1) bookedList.push(s); });
 
-    // Save ticket
     var ticket = {
       id: 'BMS' + Date.now().toString().slice(-8),
       movie: state.selectedMovie ? state.selectedMovie.title : 'Now Showing',
@@ -1024,7 +1157,6 @@ function processPayment(amount){
     state.myTickets.push(ticket);
     state.ticketCount += state.selectedSeats.length;
     updateTicketCount();
-
     openConfirmationModal(ticket);
   }, 1600);
 }
@@ -1078,7 +1210,6 @@ function downloadTicket(ticketId){
 function closeModal(){
   modalOverlay.classList.remove('active');
   modalContent.innerHTML = '';
-  // Keep selections so breadcrumb reflects journey
 }
 modalOverlay.addEventListener('click', function(e){
   if(e.target === modalOverlay) closeModal();
@@ -1087,7 +1218,7 @@ document.addEventListener('keydown', function(e){
   if(e.key === 'Escape') closeModal();
 });
 
-/* ===================== RENDER: TESTIMONIALS ===================== */
+/* ===================== TESTIMONIALS ===================== */
 function renderTestimonials(){
   testimonialsList.innerHTML = '';
   TESTIMONIALS.forEach(function(t){
