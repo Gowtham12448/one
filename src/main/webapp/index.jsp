@@ -439,11 +439,11 @@ var LOCATIONS = [
 ];
 
 var MOVIES = [
-  { id:1, title:'Pushpa 3: The Rampage', genre:'Action / Drama', lang:'Telugu', rating:9.2, votes:'128K',
-    cert:'UA', duration:'2h 45m', img:'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=500&q=80', badge:'Blockbuster',
+  { id:1, title:'Irumudi', genre:'Action / Drama', lang:'Telugu', rating:9.2, votes:'128K',
+    cert:'UA', duration:'2h 45m', img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTg3xUZD-SvgeDYrMgA3MGGFfZTDcVHUHJlxmjwOq0A&s=10',
     cities:['hyd','vzg','vjw','gnt','nlr','vzm','skm','pvp','bbl','rjp','kkd','tpt','wgl','nzb'] },
-  { id:2, title:'RRR: Rise of Revolution', genre:'Action / Epic', lang:'Telugu', rating:9.0, votes:'210K',
-    cert:'UA', duration:'3h 00m', img:'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=500&q=80', badge:'Re-Release',
+  { id:2, title:'Bethlehem Kudumba Unit', genre:'Action / Epic', lang:'Telugu', rating:9.0, votes:'210K',
+    cert:'UA', duration:'3h 00m', img:'https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/bethlehem-kudumba-unit-et00502829-1788413826.jpg', badge:'Re-Release',
     cities:['hyd','vzg','vjw','gnt','tpt','wgl'] },
   { id:3, title:'Kalki 2898 AD - Part 2', genre:'Sci-Fi / Mythological', lang:'Telugu', rating:9.5, votes:'340K',
     cert:'UA', duration:'2h 55m', img:'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=500&q=80', badge:'Trending',
